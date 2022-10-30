@@ -19,5 +19,4 @@ class Product(models.Model):
     image = models.ImageField(upload_to='uploads/')
     inStock = models.IntegerField(default=0)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True )
